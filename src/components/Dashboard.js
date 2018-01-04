@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class Dashboard extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <h2>Home</h2>
-      </div>
+      </Fragment>
     );
   }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   console.log(state)
   return {};
 }
