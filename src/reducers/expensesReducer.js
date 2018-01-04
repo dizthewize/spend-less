@@ -6,7 +6,7 @@ import {
 
 const expensesDefaultState = [];
 
-export default function(state = expensesDefaultState, action) {
+export default (state = expensesDefaultState, action) => {
   switch (action.type) {
     case ADD_EXPENSE:
       return [ ...state, action.expense]
@@ -14,15 +14,15 @@ export default function(state = expensesDefaultState, action) {
       return state.filter(({ id }) => id !== action.id)
     case EDIT_EXPENSE:
       return state.map(({ id }) => {
-        if (expense.id === action.id) {
+        if (action.expense.id === action.id) {
           return {
-            ...expense,
+            ...action.expense,
             ...action.updates
-          }
+          };
         } else {
-          return expense
+          return action.expense;
         }
-      })
+      });
     default:
       return state;
   }

@@ -57,12 +57,12 @@ export const setStartDate = startDate => ({
   startDate
 })
 
-export const setStartDate = endDate => ({
+export const setEndDate = endDate => ({
   type: SET_END_DATE,
   endDate
 })
 
-const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
+export const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
   return expenses.filter(expense => {
     const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
     const endDateMatch = typeof endDate !== 'number' || expense.createdAt >= endDate;
