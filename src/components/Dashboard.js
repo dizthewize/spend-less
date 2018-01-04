@@ -1,21 +1,16 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
+import ExpenseList from './ExpenseList';
+import ExpenseListFilters from './ExpenseListFilters';
 
-class Dashboard extends Component {
+export default class Dashboard extends Component {
 
   render() {
     return (
       <Fragment>
-        <h2>Home</h2>
+        <ExpenseListFilters />
+        <ExpenseList />
       </Fragment>
     );
   }
 }
-
-const mapStateToProps = state => {
-  console.log(state)
-  return {};
-}
-
-export default connect(mapStateToProps)(Dashboard)

@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './Header';
 import Dashboard from './Dashboard';
+import AddExpense from './AddExpense';
+import EditExpense from './EditExpense';
 import NotFound from './NotFound';
 
 export default class App extends Component {
   render() {
-    const AddExpense = () => <h2>Add expense</h2>
-    const EditExpense = () => <h2>Edit expense</h2>
     return (
       <BrowserRouter>
         <div>
