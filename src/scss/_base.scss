@@ -6,3 +6,57 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
 }
+
+.expense-title {
+  h1 {
+    text-align: center;
+  }
+}
+
+.expense-item-message {
+  text-align: center;
+}
+
+.expense-filter {
+  text-align: center;
+  .search-bar {
+    height: 3rem;
+    margin: 0 1rem;
+    width: 50%;
+  }
+
+  select {
+    height: 3rem;
+    margin-right: 1rem;
+  }
+}
+
+.text-input {
+  margin-right: 1.2rem;
+}
+
+.textarea {
+  margin: 1rem 0;
+}
+
+.form {
+  text-align: center;
+}
+
+.button-secondary {
+  text-align: center;
+}
+
+.table {
+  margin: 1.5rem auto;
+  max-width: 70%;
+  text-align: center;
+
+  td {
+    font-size: 2rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

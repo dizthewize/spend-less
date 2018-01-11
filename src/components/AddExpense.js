@@ -10,11 +10,9 @@ export class AddExpense extends Component {
     };
     render() {
         return (
-            <div>
-                <div className="page-header">
-                    <div className="container">
-                        <h1 className="title">Add Expense</h1>
-                    </div>
+            <div className="add-edit">
+                <div className="expense-title">
+                    <h1 style={{textAlign: 'center'}} className="title">Add Expense</h1>
                 </div>
                 <div className="content-container">
                     <ExpenseForm

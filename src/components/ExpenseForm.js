@@ -80,13 +80,15 @@ export default class ExpenseForm extends Component {
                     numberOfMonths={1}
                     isOutsideRange={() => false}
                 />
-                <textarea
-                    placeholder="Add a note for your expense (optional)"
-                    className="textarea"
-                    value={this.state.note}
-                    onChange={this.onNoteChange}
-                >
-                </textarea>
+                <div>
+                  <textarea
+                      placeholder="Add a note for your expense (optional)"
+                      className="textarea"
+                      value={this.state.note}
+                      onChange={this.onNoteChange}
+                  >
+                  </textarea>
+                </div>
                 <div>
                     <button className="button">Save Expense</button>
                 </div>

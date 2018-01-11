@@ -10,19 +10,19 @@ import NotFound from './NotFound';
 export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <Header />
-          <div>
-            <Switch>
-              <Route exact path='/' component={Dashboard} />
-              <Route path='/create' component={AddExpense} />
-              <Route path='/edit/:id' component={EditExpense} />
-              <Route component={NotFound} />
-            </Switch>
+        <BrowserRouter>
+          <div className="container">
+            <Header />
+            <div>
+              <Switch>
+                <Route exact path='/' component={Dashboard} />
+                <Route path='/create' component={AddExpense} />
+                <Route path='/edit/:id' component={EditExpense} />
+                <Route component={NotFound} />
+              </Switch>
+            </div>
           </div>
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
     );
   }
 }

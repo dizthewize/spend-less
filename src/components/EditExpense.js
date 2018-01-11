@@ -14,18 +14,16 @@ export class EditExpense extends Component {
     };
     render() {
         return (
-            <div>
-                <div className="page-header">
-                    <div className="content-container">
-                        <h1 className="page-header__title">Edit Expense</h1>
-                    </div>
+            <div className="add-edit">
+                <div className="expense-title">
+                    <h1 style={{textAlign: 'center'}} className="page-header__title">Edit Expense</h1>
                 </div>
                 <div className="content-container">
                     <ExpenseForm
                         expense={this.props.expense}
                         onSubmit={this.onSubmit}
                     />
-                    <button className="button button--secondary" onClick={this.onRemove}>Remove Expense</button>
+                    <button className="button button-secondary" onClick={this.onRemove}>Remove Expense</button>
                 </div>
             </div>
         );
