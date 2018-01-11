@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addExpense } from '../actions';
+import * as actions from '../actions';
 import ExpenseForm from './ExpenseForm';
 
 export class AddExpense extends Component {
@@ -24,8 +24,4 @@ export class AddExpense extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-  addExpense: expense => dispatch(addExpense(expense))
-});
-
-export default connect(null, mapDispatchToProps)(AddExpense);
+export default connect(null, actions)(AddExpense);

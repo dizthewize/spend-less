@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
     "moment": "^2.20.1",
     "node-sass-chokidar": "^0.0.3",
     "numeral": "^2.0.6",
@@ -17,10 +19,14 @@
     "uuid-v4": "^0.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "react": "react-scripts start",
+    "server": "nodemon server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar ./src src/ -o src/css/ --watch --recursive"
+    "dev-server": "concurrently \"yarn run server\" \"yarn run react\"",
+    "build-css": "node-sass-chokidar ./src src/ -o src/css/ --watch --recursive",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn run build"
   }
 }

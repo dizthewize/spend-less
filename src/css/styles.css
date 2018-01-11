@@ -559,7 +559,8 @@ body {
   text-align: center; }
 
 .button-secondary {
-  text-align: center; }
+  margin: 0.8rem auto;
+  display: block; }
 
 .table {
   margin: 1.5rem auto;
