@@ -14,7 +14,7 @@ export default (state = expensesDefaultState, action) => {
       return state.filter(({ id }) => id !== action.id)
     case EDIT_EXPENSE:
       return state.map(({ id }) => {
-        if (action.expense.id === action.id) {
+        if (id === action.id) {
           return {
             ...action.expense,
             ...action.updates

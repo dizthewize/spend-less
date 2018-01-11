@@ -563,7 +563,7 @@ body {
 
 .table {
   margin: 1.5rem auto;
-  max-width: 70%;
+  width: 70%;
   text-align: center; }
   .table td {
     font-size: 2rem; }
